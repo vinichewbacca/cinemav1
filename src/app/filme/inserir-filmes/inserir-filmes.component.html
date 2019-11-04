@@ -1,0 +1,41 @@
+<div [hidden]="submitted" class="container">
+  <h3 class="red-text text-accent-4">Cadastrar Filme</h3>
+
+  <div class="z-depth-4">
+    <form (ngSubmit)="onSubmit()" class="col s12 quadrado">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="tituloFilme" type="text" class="validate" required [(ngModel)]="filme.titulo" name="titulo">
+          <label for="tituloFilme">Titulo do Filme</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="genero" type="text" class="validate" required [(ngModel)]="filme.genero" name="genero">
+          <label for="genero">Genero</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s8">
+          <input id="duracao" type="text" class="validate" required [(ngModel)]="filme.duracao" name="duraco">
+          <label for="duracao">Duração</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="classificacao" type="text" class="validate" required [(ngModel)]="filme.classificacao" name="classificacao">
+          <label for="classificacao">Classificação</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-floating waves-effect waves-light btn blue lighten-1 ">
+        <i class="material-icons">save</i>
+      </button>
+      &nbsp;&nbsp;
+      <button routerLink="" class="btn-floating waves-effect waves-light btn red ">
+        <i class="material-icons">cancel</i>
+      </button>
+
+    </form>
+  </div>
+</div>
